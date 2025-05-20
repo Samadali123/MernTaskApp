@@ -1,0 +1,157 @@
+
+task.css
+.task-container {
+  max-width: 1000px;
+  background: #ffffff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.task-container h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.taskheader {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  border-radius: 0.5rem;
+  overflow:hidden;
+  flex-wrap: wrap;
+}
+
+.tasklist {
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 1rem;
+  padding-right: 0.5rem;
+}
+
+/* Individual Task Row */
+.alltasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  transition: background 0.3s ease;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+.alltasks:hover {
+  background-color: #f0f0f0;
+}
+
+.alltasks h6 {
+  flex: 1;
+  margin: 0.4rem 0.5rem;
+  font-size: 0.95rem;
+  min-width: 120px;
+  word-wrap: break-word;
+}
+
+.completed {
+  color: green;
+  font-weight: bold;
+}
+
+.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:nth-child(1) {
+  background-color: #dc3545;
+}
+
+#completed {
+  background-color: #007bff;
+}
+
+.notasks {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Custom Scrollbar */
+.tasklist::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tasklist::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.tasklist::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.tasklist::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .taskheader,
+  .alltasks {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .alltasks h6 {
+    width: 100%;
+    margin: 0.2rem 0;
+  }
+
+  .taskheader h6 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+

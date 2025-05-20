@@ -1,0 +1,88 @@
+/* /* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import "tailwindcss";
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "helvetica";
+}
+
+html,body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:whitesmoke;
+  color:black;
+  overflow: hidden;
+}
+
+.form {
+   position: relative;
+   width: 45vw;
+   height: 55vh;
+}
+
+.title, .description{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+  margin-top: 2vw;
+}
+
+
+.title, .description  label{
+  font-size: 1.2vw;
+}
+
+.title input{
+  border: none;
+}
+
+.description input{
+  border: none;
+}
+
+input{
+  padding: 1vw ;
+}
+
+.buttons{
+  display: flex;
+  gap: 2.3vw;
+  margin-top: 2.5vw;
+}
+
+.buttons button{
+  border: none;
+}
+
+.buttons #cancel{
+      background-color: black;
+      border-radius: 0.3vw;
+      padding:  0.5vw 1vw;
+      color: white;
+}
+
+
+.buttons #save{
+  background-color: #007bff;
+  border-radius: 0.3vw;
+  padding:  0.5vw 1vw;
+  color: white;
+}
+
+
+.right-btn {
+   margin-top: 5vw;
+   display: flex;
+   justify-content: right;
+}
+
