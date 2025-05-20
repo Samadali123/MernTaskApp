@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended : true}))
 // logging requests 
 app.use(logger("dev"))
 
-
+app.use(express.static('dist'));
 // //aply cors
 // app.use(cors());
 
