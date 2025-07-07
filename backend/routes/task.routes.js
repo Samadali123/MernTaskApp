@@ -8,7 +8,6 @@ app.post("/api/createtask",  createTask)
 // /api/fetchtasks
 app.get("/api/fetchtasks",  getAllTasks)
 
-app.get("/api/task/:id", getSingleTask)
 // /api/updatetask
 app.put("/api/updatetask", updateTaskStatus)
 
