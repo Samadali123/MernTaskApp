@@ -1,4 +1,4 @@
- const { createTask, getAllTasks, updateTaskStatus, deleteTask } = require("../controllers/task.controller")
+ const { createTask, getAllTasks, updateTaskStatus, deleteTask, getSingleTask } = require("../controllers/task.controller")
 
 
 module.exports = (app)=>{
@@ -8,7 +8,7 @@ app.post("/api/createtask",  createTask)
 // /api/fetchtasks
 app.get("/api/fetchtasks",  getAllTasks)
 
-
+app.get("/api/task/:id", getSingleTask)
 // /api/updatetask
 app.put("/api/updatetask", updateTaskStatus)
 

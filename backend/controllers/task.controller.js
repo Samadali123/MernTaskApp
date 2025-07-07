@@ -57,6 +57,20 @@ exports.updateTaskStatus = async (req, res)=>{
 }
 
 
+exports.getSingleTask = async(req, res)=>{
+    try {
+        const {id} = req.params;
+        if(!id) return res.status(400).json({success: false, message: "Please provide taskId for fetching the task"});
+
+        const task = await taskModel.findById(id);
+        if(!task) return res.status(404).json({success: false, message: "Task not found"});
+
+        res.status(200).json({success: true, message: "Task fetched successfully", task});
+    } catch (error) {
+        res.status(500).json({success: false, message: error.message});
+    }
+}
+
 
 exports.deleteTask =  async (req, res)=>{
     try {
